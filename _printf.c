@@ -23,11 +23,6 @@ int _printf(const char *format, ...)
 			{
 				l = l + print_str(ptr), i = i + 2;
 			}
-			else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
-			{
-				l = l + print_dec(ptr);
-				i = i + 2;
-			}
 			else if (format[i] == '%' && format[i + 1] == '%')
 				_putchar('%'), i = i + 2, l++;
 			else
