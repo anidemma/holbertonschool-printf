@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_char -  Print the parameter
- * @ptr: Character
+ * @ptr: va_list
  * Return: Always 0
  * -------------------------------------------------------------
  * 
