@@ -10,4 +10,5 @@ int _putchar(char c);
 int print_char(va_list ptr);
 int print_str(va_list ptr);
 int print_dec(va_list ptr);
+int print_dec_int(int b);
 #endif
