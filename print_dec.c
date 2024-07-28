@@ -6,8 +6,8 @@
  */
 int print_dec(va_list ptr)
 {
-	int num = va_arg(ptr, int);
-	int count = 0;
+	unsigned int num = va_arg(ptr, int);
+	unsigned int count = 0;
 
 	if (num < 0)
 	{
@@ -23,9 +23,9 @@ int print_dec(va_list ptr)
  * @num: number
  * Return: count
  */
-int print_number(int num)
+int print_number(unsigned int num)
 {
-	int count = 0;
+	unsigned int count = 0;
 
 	if (num / 10)
 		count += print_number(num / 10);
