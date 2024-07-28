@@ -2,24 +2,34 @@
 /**
  * print_dec - function
  * @ptr: va_list
- * Return:i
+ * Return: length of string
  */
 int print_dec(va_list ptr)
 {
-	char *b;
-	int i;
+	int num = va_arg(ptr, int);
+	int count = 0;
 
-	b = va_arg(ptr, char*);
-	if (b < 0)
+	if (num < 0)
 	{
 		_putchar('-');
-		b = -1 * b;
+		count++;
+		num = -num;
 	}
+	count += print_number(num);
+	return (count);
+}
+/**
+ * print_number - function for print big number
+ * @num: number
+ * Return: count
+ */
+int print_number(int num)
+{
+	int count = 0;
 
-	i = b / 10;
-	if (i)
-		print_dec(b / 10);
-
-	_putchar(b % 10 + '0');
-	return (i);
+	if (num / 10)
+		count += print_number(num / 10);
+	_putchar(num % 10 + '0');
+	count++;
+	return (count);
 }
